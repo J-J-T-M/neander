@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'count3a:TIMER|qs[0]'
+Slack : -2.153
+TNS   : -19.562
+
+Type  : Slow 1200mV 85C Model Setup 'mclk'
+Slack : -0.253
+TNS   : -0.495
+
+Type  : Slow 1200mV 85C Model Hold 'count3a:TIMER|qs[0]'
+Slack : -1.486
+TNS   : -11.888
+
+Type  : Slow 1200mV 85C Model Hold 'mclk'
+Slack : -0.071
+TNS   : -0.175
+
+Type  : Slow 1200mV 85C Model Recovery 'mclk'
+Slack : -0.925
+TNS   : -2.768
+
+Type  : Slow 1200mV 85C Model Removal 'mclk'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mclk'
+Slack : -3.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Slow 1200mV 0C Model Setup 'count3a:TIMER|qs[0]'
+Slack : -1.870
+TNS   : -15.745
+
+Type  : Slow 1200mV 0C Model Setup 'mclk'
+Slack : -0.112
+TNS   : -0.214
+
+Type  : Slow 1200mV 0C Model Hold 'count3a:TIMER|qs[0]'
+Slack : -1.318
+TNS   : -10.544
+
+Type  : Slow 1200mV 0C Model Hold 'mclk'
+Slack : -0.074
+TNS   : -0.204
+
+Type  : Slow 1200mV 0C Model Recovery 'mclk'
+Slack : -0.717
+TNS   : -2.144
+
+Type  : Slow 1200mV 0C Model Removal 'mclk'
+Slack : 0.320
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mclk'
+Slack : -3.000
+TNS   : -6.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
+Slack : -1.000
+TNS   : -32.000
+
+Type  : Fast 1200mV 0C Model Setup 'count3a:TIMER|qs[0]'
+Slack : -1.043
+TNS   : -6.064
+
+Type  : Fast 1200mV 0C Model Setup 'mclk'
+Slack : 0.165
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'count3a:TIMER|qs[0]'
+Slack : -0.918
+TNS   : -7.396
+
+Type  : Fast 1200mV 0C Model Hold 'mclk'
+Slack : -0.075
+TNS   : -0.206
+
+Type  : Fast 1200mV 0C Model Recovery 'mclk'
+Slack : -0.205
+TNS   : -0.615
+
+Type  : Fast 1200mV 0C Model Removal 'mclk'
+Slack : 0.170
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mclk'
+Slack : -3.000
+TNS   : -6.105
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
+Slack : -1.000
+TNS   : -32.000
+
+------------------------------------------------------------
