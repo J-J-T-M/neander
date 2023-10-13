@@ -1,81 +1,65 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
 
-entity control_unit is
-	port (
-   instr: in std_logic_vector (15 downto 0);
-	N   : in std_logic ;
-	Z   : in std_logic ;
-	t   : in std_logic_vector (7 downto 0);
-	inc_PC: out std_logic ;
-	sel : out std_logic ;
-	carga_REM: out std_logic ;
-	carga_RI: out std_logic ;
-	carga_RDM: out std_logic ;
-	carga_AC: out std_logic ;
-	carga_NZ: out std_logic ;
-	carga_PC: out std_logic ;
-	s: out std_logic_vector (2 downto 0);
-	goto_t0: out std_logic 	
+ENTITY control_unit IS
+	PORT (
+		instr : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+		N : IN STD_LOGIC;
+		Z : IN STD_LOGIC;
+		t : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		inc_PC : OUT STD_LOGIC;
+		sel : OUT STD_LOGIC;
+		carga_REM : OUT STD_LOGIC;
+		carga_RI : OUT STD_LOGIC;
+		carga_RDM : OUT STD_LOGIC;
+		carga_AC : OUT STD_LOGIC;
+		carga_NZ : OUT STD_LOGIC;
+		carga_PC : OUT STD_LOGIC;
+		s : OUT STD_LOGIC_VECTOR (2 DOWNTO 0);
+		goto_t0 : OUT STD_LOGIC
 	);
-end entity;
+END ENTITY;
+ARCHITECTURE control_unit OF control_unit IS
+	CONSTANT iNOP : INTEGER := 0;
+	CONSTANT iSTA : INTEGER := 1;
+	CONSTANT iLDA : INTEGER := 2;
+	CONSTANT iADD : INTEGER := 3;
+	CONSTANT iOR : INTEGER := 4;
+	CONSTANT iAND : INTEGER := 5;
+	CONSTANT iNOT : INTEGER := 6;
+	CONSTANT iJMP : INTEGER := 7;
+	CONSTANT iJN : INTEGER := 8;
+	CONSTANT iJZ : INTEGER := 9;
 
+BEGIN
 
-architecture control_unit of control_unit is
-constant iNOP: integer := 0;
-constant iSTA : integer := 1;
-constant iLDA: integer := 2;
-constant iADD: integer := 3;
-constant iOR: integer := 4;
-constant iAND:  integer := 5;
-constant iNOT: integer := 6;
-constant iJMP : integer := 7;
-constant iJN:   integer := 8;
-constant iJZ:   integer := 9;
+	carga_REM <= t(0)
+		OR ((t(3) OR t(5)) AND (instr(iLDA) OR instr(iADD)));
 
-begin
+	carga_RDM <= t(1)
+		OR ((t(4) OR t(6)) AND (instr(iLDA) OR instr(iADD)));
 
-carga_REM <= t(0) 
-				or (t(3) and instr(ILDA)) 
-				or (t(5) and instr(ILDA))
-				or (t(3) and instr(IADD)) 
-				or (t(5) and instr(IADD));	
-				
-carga_RDM <= t(1)  
-				or (t(4) and instr(ILDA)) 
-				or (t(6) and instr(ILDA))
-				or (t(4) and instr(IADD)) 
-				or (t(6) and instr(IADD));
-            		 
-inc_PC <= t(1) or  t(2) 
-			 or (t(6) and instr(ILDA)) 
-			 or (t(7) and instr(ILDA))
-			 or (t(6) and instr(IADD)) 
-			 or (t(7) and instr(IADD));  
+	inc_PC <= t(1) OR t(2)
+		OR ((t(6) OR t(7)) AND (instr(iLDA) OR instr(iADD)));
 
+	carga_RI <= t(2);
 
+	sel <= (t(4) OR t(5)) AND (instr(iLDA) OR instr(iADD));
 
-carga_RI <= t(2);
+	carga_AC <= (t(7) AND (instr(iLDA) OR instr(iADD))) OR
+		(t(4) AND instr(iNOT));
 
-sel <= ((t(4) and instr(ILDA)) or (t(5) and instr(ILDA))) OR (t(4) and instr(IADD)) or (t(5) and instr(IADD));
+	carga_NZ <= (t(7) AND (instr(iLDA) OR instr(iADD))) OR
+		(t(4) AND instr(iNOT));
 
+	carga_PC <= t(2) OR (t(7) AND (instr(iLDA) OR instr(iADD)));
+	goto_t0 <= (instr(iNOP) AND t(3)) OR
+		(instr(iNOT) AND t(5));
 
+	s(0) <= (instr(iADD) AND (t(6) OR t(7))) OR
+	(instr(iNOT) AND (t(3) OR t(4)));
 
-carga_AC <=  (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
-			
-carga_NZ <= (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
-            
+	s(1) <= instr(iADD) AND (t(6) OR t(7));
+	s(2) <= instr(iNOT) AND (t(3) OR t(4));
 
-carga_PC <= t(2) or (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
-
-
-goto_t0 <= instr(iNOP) and t(3);
-
-s(0) <= instr(IADD) AND (t(6) OR t(7));
-
-s(1) <= instr(IADD) AND (t(6) OR t(7));
-s(2) <= '0';
-
-		   
-
-end control_unit;
+END control_unit;
