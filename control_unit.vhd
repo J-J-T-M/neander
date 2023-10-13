@@ -35,39 +35,45 @@ constant iJZ:   integer := 9;
 
 begin
 
-carga_REM <= t(0) or
-				(t(3) and instr(ILDA)) or 
-				(t(5) and instr(ILDA));	
+carga_REM <= t(0) 
+				or (t(3) and instr(ILDA)) 
+				or (t(5) and instr(ILDA))
+				or (t(3) and instr(IADD)) 
+				or (t(5) and instr(IADD));	
 				
-carga_RDM <= t(1) or 
-				(t(4) and instr(ILDA)) or 
-				(t(6) and instr(ILDA));
+carga_RDM <= t(1)  
+				or (t(4) and instr(ILDA)) 
+				or (t(6) and instr(ILDA))
+				or (t(4) and instr(IADD)) 
+				or (t(6) and instr(IADD));
             		 
-inc_PC <= t(1) or 
-          t(2) or 
-			 (t(6) and instr(ILDA)) or 
-			 (t(7) and instr(ILDA));  
+inc_PC <= t(1) or  t(2) 
+			 or (t(6) and instr(ILDA)) 
+			 or (t(7) and instr(ILDA))
+			 or (t(6) and instr(IADD)) 
+			 or (t(7) and instr(IADD));  
 
 
 
 carga_RI <= t(2);
 
-sel <= (t(4) and instr(ILDA)) or (t(5) and instr(ILDA));
+sel <= ((t(4) and instr(ILDA)) or (t(5) and instr(ILDA))) OR (t(4) and instr(IADD)) or (t(5) and instr(IADD));
 
 
 
-carga_AC <= (t(7) and instr(ILDA));
+carga_AC <=  (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
 			
-carga_NZ <= (t(7) and instr(ILDA));
+carga_NZ <= (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
             
 
-carga_PC <= t(2) or (t(7) and instr(ILDA));
+carga_PC <= t(2) or (t(7) and instr(ILDA)) OR (t(7) and instr(IADD));
 
 
 goto_t0 <= instr(iNOP) and t(3);
 
-s(0) <= '0';
-s(1) <= '0';
+s(0) <= instr(IADD) AND (t(6) OR t(7));
+
+s(1) <= instr(IADD) AND (t(6) OR t(7));
 s(2) <= '0';
 
 		   

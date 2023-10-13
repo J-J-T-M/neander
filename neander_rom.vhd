@@ -1,6 +1,6 @@
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.std_logic_unsigned.all;
+library iEEE;
+use iEEE.std_logic_1164.all;
+use iEEE.std_logic_unsigned.all;
 
 entity neander_rom is
 	port (
@@ -25,9 +25,9 @@ constant iHLT: std_logic_vector (7 downto 0) := "11110000";
 type rom_array is array (NATURAL range <>) of std_logic_vector (7 downto 0);
 
 constant rom: rom_array := (
-ILDA, X"03",   -- carrega o acumulador com a constante na penultima posicao da ROM
-iNOP, 
-iNOP,   -- soma com o conteúdo da posição 0f   
+iLDA, X"0E",   
+iADD, X"0F",
+iNOP,   
 iNOP,
 iNOP,   
 iNOP,
@@ -37,9 +37,8 @@ iNOP,
 iNOP, 
 iNOP,
 iNOP,	
-iNOP,	
-X"03",	
-iNOP  
+X"03",
+X"02"	
 );		
 
 begin
