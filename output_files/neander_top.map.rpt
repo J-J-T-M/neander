@@ -1,6 +1,6 @@
 Analysis & Synthesis report for neander_top
-Tue Sep 19 16:38:15 2023
-Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+Fri Oct 13 10:47:46 2023
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
 ---------------------
@@ -51,28 +51,28 @@ applicable agreement for further details.
 
 
 
-+--------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                         ;
-+------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 19 16:38:15 2023           ;
-; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
-; Revision Name                      ; neander_top                                     ;
-; Top-level Entity Name              ; neander_top                                     ;
-; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 39                                              ;
-;     Total combinational functions  ; 29                                              ;
-;     Dedicated logic registers      ; 27                                              ;
-; Total registers                    ; 27                                              ;
-; Total pins                         ; 46                                              ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 0                                               ;
-; Embedded Multiplier 9-bit elements ; 0                                               ;
-; Total GXB Receiver Channel PCS     ; 0                                               ;
-; Total GXB Receiver Channel PMA     ; 0                                               ;
-; Total GXB Transmitter Channel PCS  ; 0                                               ;
-; Total GXB Transmitter Channel PMA  ; 0                                               ;
-; Total PLLs                         ; 0                                               ;
-+------------------------------------+-------------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Oct 13 10:47:46 2023      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; neander_top                                ;
+; Top-level Entity Name              ; neander_top                                ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 35                                         ;
+;     Total combinational functions  ; 29                                         ;
+;     Dedicated logic registers      ; 23                                         ;
+; Total registers                    ; 23                                         ;
+; Total pins                         ; 46                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------+
@@ -161,47 +161,54 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 16     ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-8         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                             ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                      ; Library ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
-; ula8bit.vhd                      ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/ula8bit.vhd      ;         ;
-; reg.vhd                          ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/reg.vhd          ;         ;
-; pc.vhd                           ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/pc.vhd           ;         ;
-; neander_top.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/neander_top.vhd  ;         ;
-; neander_rom.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/neander_rom.vhd  ;         ;
-; mux2g.vhd                        ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/mux2g.vhd        ;         ;
-; decoder4to16.vhd                 ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/decoder4to16.vhd ;         ;
-; decoder3to8.vhd                  ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/decoder3to8.vhd  ;         ;
-; count3a.vhd                      ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/count3a.vhd      ;         ;
-; control_unit.vhd                 ; yes             ; User VHDL File  ; C:/Users/Aluno/Documents/neander/control_unit.vhd ;         ;
-+----------------------------------+-----------------+-----------------+---------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
+; ula8bit.vhd                      ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/ula8bit.vhd      ;         ;
+; reg.vhd                          ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/reg.vhd          ;         ;
+; pc.vhd                           ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/pc.vhd           ;         ;
+; neander_top.vhd                  ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/neander_top.vhd  ;         ;
+; neander_rom.vhd                  ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/neander_rom.vhd  ;         ;
+; mux2g.vhd                        ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/mux2g.vhd        ;         ;
+; decoder4to16.vhd                 ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/decoder4to16.vhd ;         ;
+; decoder3to8.vhd                  ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/decoder3to8.vhd  ;         ;
+; count3a.vhd                      ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/count3a.vhd      ;         ;
+; control_unit.vhd                 ; yes             ; User VHDL File  ; C:/Users/jonat/Downloads/neander/neander/control_unit.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 46               ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; reg:REG_RDM|q[0] ;
-; Maximum fan-out          ; 20               ;
-; Total fan-out            ; 227              ;
-; Average fan-out          ; 1.53             ;
-+--------------------------+------------------+
++------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary    ;
++--------------------------+---------------------+
+; Resource                 ; Usage               ;
++--------------------------+---------------------+
+; I/O pins                 ; 46                  ;
+; DSP block 9-bit elements ; 0                   ;
+; Maximum fan-out node     ; count3a:TIMER|qs[1] ;
+; Maximum fan-out          ; 13                  ;
+; Total fan-out            ; 215                 ;
+; Average fan-out          ; 1.49                ;
++--------------------------+---------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -209,17 +216,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |neander_top                   ; 29 (1)            ; 27 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                           ; work         ;
+; |neander_top                   ; 29 (1)            ; 23 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                           ; work         ;
 ;    |PC:REG_PC|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|PC:REG_PC                 ; work         ;
 ;    |control_unit:CU|           ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|control_unit:CU           ; work         ;
 ;    |count3a:TIMER|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|count3a:TIMER             ; work         ;
 ;    |decoder3to8:TIMER_DECODER| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder3to8:TIMER_DECODER ; work         ;
 ;    |mux2g:MULTIPLEX|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|mux2g:MULTIPLEX           ; work         ;
 ;    |neander_rom:MEM|           ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|neander_rom:MEM           ; work         ;
-;    |reg:REG_AC|                ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_AC                ; work         ;
+;    |reg:REG_AC|                ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_AC                ; work         ;
 ;    |reg:REG_RDM|               ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RDM               ; work         ;
 ;    |reg:REG_REM|               ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_REM               ; work         ;
-;    |reg:REG_RI|                ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RI                ; work         ;
+;    |reg:REG_RI|                ; 0 (0)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RI                ; work         ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -229,11 +236,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+----------------------------------------+
 ; Register name                          ; Reason for Removal                     ;
 +----------------------------------------+----------------------------------------+
-; reg:REG_RDM|q[4,6,7]                   ; Stuck at GND due to stuck port data_in ;
-; reg:REG_AC|q[4,6,7]                    ; Stuck at GND due to stuck port data_in ;
-; reg:REG_RI|q[4,6,7]                    ; Stuck at GND due to stuck port data_in ;
-; reg:REG_RDM|q[1..3]                    ; Merged with reg:REG_RDM|q[0]           ;
-; Total Number of Removed Registers = 12 ;                                        ;
+; reg:REG_RDM|q[2..4,6,7]                ; Stuck at GND due to stuck port data_in ;
+; reg:REG_AC|q[2..4,6,7]                 ; Stuck at GND due to stuck port data_in ;
+; reg:REG_RI|q[2..4,6,7]                 ; Stuck at GND due to stuck port data_in ;
+; reg:REG_RDM|q[1]                       ; Merged with reg:REG_RDM|q[0]           ;
+; Total Number of Removed Registers = 16 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -248,6 +255,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;                  ; due to stuck port data_in ;                                        ;
 ; reg:REG_RDM|q[4] ; Stuck at GND              ; reg:REG_RI|q[4]                        ;
 ;                  ; due to stuck port data_in ;                                        ;
+; reg:REG_RDM|q[3] ; Stuck at GND              ; reg:REG_RI|q[3]                        ;
+;                  ; due to stuck port data_in ;                                        ;
+; reg:REG_RDM|q[2] ; Stuck at GND              ; reg:REG_RI|q[2]                        ;
+;                  ; due to stuck port data_in ;                                        ;
 +------------------+---------------------------+----------------------------------------+
 
 
@@ -256,7 +267,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 23    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 3     ;
@@ -389,10 +400,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
-    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Sep 19 16:38:14 2023
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Fri Oct 13 10:47:44 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off neander_top -c neander_top
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula8bit.vhd
     Info (12022): Found design unit 1: ula8bit-behavioral
     Info (12023): Found entity 1: ula8bit
@@ -468,8 +479,10 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux4
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux7
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer control_unit:CU|carga_REM~synth
+    Warning (19017): Found clock multiplexer control_unit:CU|carga_REM~0
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "AC_out[2]" is stuck at GND
+    Warning (13410): Pin "AC_out[3]" is stuck at GND
     Warning (13410): Pin "AC_out[4]" is stuck at GND
     Warning (13410): Pin "AC_out[6]" is stuck at GND
     Warning (13410): Pin "AC_out[7]" is stuck at GND
@@ -477,23 +490,27 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "REM_out[5]" is stuck at GND
     Warning (13410): Pin "REM_out[6]" is stuck at GND
     Warning (13410): Pin "REM_out[7]" is stuck at GND
+    Warning (13410): Pin "RDM_out[2]" is stuck at GND
+    Warning (13410): Pin "RDM_out[3]" is stuck at GND
     Warning (13410): Pin "RDM_out[4]" is stuck at GND
     Warning (13410): Pin "RDM_out[6]" is stuck at GND
     Warning (13410): Pin "RDM_out[7]" is stuck at GND
+    Warning (13410): Pin "RI_out[2]" is stuck at GND
+    Warning (13410): Pin "RI_out[3]" is stuck at GND
     Warning (13410): Pin "RI_out[4]" is stuck at GND
     Warning (13410): Pin "RI_out[6]" is stuck at GND
     Warning (13410): Pin "RI_out[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 85 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
-    Info: Peak virtual memory: 4684 megabytes
-    Info: Processing ended: Tue Sep 19 16:38:15 2023
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+    Info (21061): Implemented 35 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Fri Oct 13 10:47:46 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

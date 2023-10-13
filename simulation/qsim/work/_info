@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/jonat/Downloads/neander/neander/simulation/qsim
+vneander_top
+Z1 !s110 1697208500
+!i10b 1
+!s100 _zj7dbBI_7kAKNd]i7Oe80
+Ice5ScC<b<leZf]eXz26l43
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1697208499
+8neander_top.vo
+Fneander_top.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1697208500.000000
+!s107 neander_top.vo|
+!s90 -work|work|neander_top.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vneander_top_vlg_check_tst
+R1
+!i10b 1
+!s100 LEVc29XhgVf9_mX1KE9<32
+IRN[MB9Xk8joW=o>IHBEle2
+R2
+R0
+Z7 w1697208497
+Z8 8Waveform1.vwf.vt
+Z9 FWaveform1.vwf.vt
+L0 57
+R3
+r1
+!s85 0
+31
+R4
+Z10 !s107 Waveform1.vwf.vt|
+Z11 !s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R5
+R6
+vneander_top_vlg_sample_tst
+R1
+!i10b 1
+!s100 IY9HH7d^jXkDWN9=_I?i50
+I<m>b4`3]OdZ>G^U_YdEEG3
+R2
+R0
+R7
+R8
+R9
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+R10
+R11
+!i113 1
+R5
+R6
+vneander_top_vlg_vec_tst
+R1
+!i10b 1
+!s100 V_e<nBm[oOBHEU;0kQ6:o1
+I[S@3_VSmIU8Vzo0^g3[R22
+R2
+R0
+R7
+R8
+R9
+L0 1001
+R3
+r1
+!s85 0
+31
+R4
+R10
+R11
+!i113 1
+R5
+R6
