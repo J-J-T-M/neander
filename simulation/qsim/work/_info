@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/Users/jonat/Downloads/neander/neander/simulation/qsim
 vneander_top
-Z1 !s110 1697231207
+Z1 !s110 1697234975
 !i10b 1
-!s100 aZNDS>6VK;0fc[?GgjMCc3
-Id9E=bG44GdNOB7VDQC5R<1
+!s100 lZ@6AKlQP_WMFR6;;iK^31
+IGI<1lIU@Olzh`9;X7TkV_3
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1697231206
+w1697234974
 8neander_top.vo
 Fneander_top.vo
 L0 31
@@ -23,7 +23,7 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1697231207.000000
+Z4 !s108 1697234975.000000
 !s107 neander_top.vo|
 !s90 -work|work|neander_top.vo|
 !i113 1
@@ -36,7 +36,7 @@ R1
 IRN[MB9Xk8joW=o>IHBEle2
 R2
 R0
-Z7 w1697231204
+Z7 w1697234972
 Z8 8Waveform1.vwf.vt
 Z9 FWaveform1.vwf.vt
 L0 57
