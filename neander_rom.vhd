@@ -19,6 +19,7 @@ ARCHITECTURE neander_rom OF neander_rom IS
     CONSTANT iNOT : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01100000";
     CONSTANT iJMP : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01110000";
     CONSTANT iJN : STD_LOGIC_VECTOR (7 DOWNTO 0) := "10000000";
+    CONSTANT iJZ : STD_LOGIC_VECTOR (7 DOWNTO 0) := "10010000"; -- Adicionada a instrução JZ
     CONSTANT iHLT : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11110000";
 
     TYPE rom_array IS ARRAY (NATURAL RANGE <>) OF STD_LOGIC_VECTOR (7 DOWNTO 0);
@@ -30,8 +31,8 @@ ARCHITECTURE neander_rom OF neander_rom IS
         iNOP, X"00",
         iSTA, X"10",
         iHLT, X"1F",
-        iNOP, X"00", -- Adicionada instrução JN
-        iNOP, X"00",
+        iJN, X"18",  
+        iJZ, X"14",  -- Adicionada instrução JZ
         iNOP, X"00",
         iNOP, X"00",
         X"03", X"02"

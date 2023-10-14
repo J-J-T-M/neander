@@ -4,7 +4,7 @@
 ; Hierarchy     ; Input ; Constant Input ; Unused Input ; Floating Input ; Output ; Constant Output ; Unused Output ; Floating Output ; Bidir ; Constant Bidir ; Unused Bidir ; Input only Bidir ; Output only Bidir ;
 +---------------+-------+----------------+--------------+----------------+--------+-----------------+---------------+-----------------+-------+----------------+--------------+------------------+-------------------+
 ; ULA           ; 19    ; 0              ; 0            ; 0              ; 10     ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
-; CU            ; 26    ; 1              ; 10           ; 1              ; 12     ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
+; CU            ; 26    ; 1              ; 9            ; 1              ; 12     ; 1               ; 1             ; 1               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; INSTR_DECODER ; 4     ; 0              ; 0            ; 0              ; 16     ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; TIMER_DECODER ; 3     ; 0              ; 0            ; 0              ; 8      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;
 ; TIMER         ; 2     ; 0              ; 0            ; 0              ; 3      ; 0               ; 0             ; 0               ; 0     ; 0              ; 0            ; 0                ; 0                 ;

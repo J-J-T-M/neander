@@ -1,16 +1,16 @@
 # do neander_top.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:51:32 on Oct 14,2023
+# Start time: 12:05:39 on Oct 14,2023
 # vlog -work work neander_top.vo 
 # -- Compiling module neander_top
 # 
 # Top level modules:
 # 	neander_top
-# End time: 11:51:32 on Oct 14,2023, Elapsed time: 0:00:00
+# End time: 12:05:39 on Oct 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 11:51:32 on Oct 14,2023
+# Start time: 12:05:39 on Oct 14,2023
 # vlog -work work Waveform1.vwf.vt 
 # -- Compiling module neander_top_vlg_sample_tst
 # -- Compiling module neander_top_vlg_check_tst
@@ -18,10 +18,10 @@
 # 
 # Top level modules:
 # 	neander_top_vlg_vec_tst
-# End time: 11:51:33 on Oct 14,2023, Elapsed time: 0:00:01
+# End time: 12:05:39 on Oct 14,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneiv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate work.neander_top_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 11:51:33 on Oct 14,2023
+# Start time: 12:05:40 on Oct 14,2023
 # Loading work.neander_top_vlg_vec_tst
 # Loading work.neander_top
 # Loading cycloneiv_ver.cycloneiv_io_obuf
@@ -40,8 +40,22 @@
 # Loading timing data from neander_top_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
 #    Time: 0 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst File: Waveform1.vwf.vt
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:618723 ps, d:618857 ps, 157 ps );
+#    Time: 618857 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[0] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:618723 ps, d:618857 ps, 157 ps );
+#    Time: 618857 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[1] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:618723 ps, d:618858 ps, 157 ps );
+#    Time: 618858 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[2] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:658723 ps, d:658748 ps, 157 ps );
+#    Time: 658748 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[0] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:658723 ps, d:658748 ps, 157 ps );
+#    Time: 658748 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[2] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:658723 ps, d:658748 ps, 157 ps );
+#    Time: 658748 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[1] 
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_primitives.v(290): $hold( posedge clk &&& nosloadsclr:658723 ps, d:658751 ps, 157 ps );
+#    Time: 658751 ps  Iteration: 0  Instance: /neander_top_vlg_vec_tst/i1/\REG_REM|q[3] 
 # Simulation passed !
 # ** Note: $finish    : Waveform1.vwf.vt(997)
 #    Time: 1 us  Iteration: 0  Instance: /neander_top_vlg_vec_tst/tb_out
-# End time: 11:51:33 on Oct 14,2023, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
+# End time: 12:05:40 on Oct 14,2023, Elapsed time: 0:00:00
+# Errors: 7, Warnings: 0
