@@ -1,5 +1,5 @@
 Analysis & Synthesis report for neander_top
-Sat Oct 14 10:56:16 2023
+Sat Oct 14 11:51:01 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -14,22 +14,21 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: reg:REG_REM
- 13. Parameter Settings for User Entity Instance: reg:REG_RDM
- 14. Parameter Settings for User Entity Instance: reg:REG_RI
- 15. Parameter Settings for User Entity Instance: reg:REG_AC
- 16. Parameter Settings for User Entity Instance: mux2g:MULTIPLEX
- 17. Port Connectivity Checks: "control_unit:CU"
- 18. Port Connectivity Checks: "PC:REG_PC"
- 19. Port Connectivity Checks: "reg:REG_AC"
- 20. Port Connectivity Checks: "reg:REG_RI"
- 21. Port Connectivity Checks: "reg:REG_RDM"
- 22. Port Connectivity Checks: "reg:REG_REM"
- 23. Elapsed Time Per Partition
- 24. Analysis & Synthesis Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: reg:REG_REM
+ 12. Parameter Settings for User Entity Instance: reg:REG_RDM
+ 13. Parameter Settings for User Entity Instance: reg:REG_RI
+ 14. Parameter Settings for User Entity Instance: reg:REG_AC
+ 15. Parameter Settings for User Entity Instance: mux2g:MULTIPLEX
+ 16. Port Connectivity Checks: "control_unit:CU"
+ 17. Port Connectivity Checks: "PC:REG_PC"
+ 18. Port Connectivity Checks: "reg:REG_AC"
+ 19. Port Connectivity Checks: "reg:REG_RI"
+ 20. Port Connectivity Checks: "reg:REG_RDM"
+ 21. Port Connectivity Checks: "reg:REG_REM"
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
 
 
 
@@ -55,15 +54,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 14 10:56:16 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 14 11:51:01 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; neander_top                                ;
 ; Top-level Entity Name              ; neander_top                                ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 66                                         ;
-;     Total combinational functions  ; 59                                         ;
-;     Dedicated logic registers      ; 35                                         ;
-; Total registers                    ; 35                                         ;
+; Total logic elements               ; 71                                         ;
+;     Total combinational functions  ; 63                                         ;
+;     Dedicated logic registers      ; 37                                         ;
+; Total registers                    ; 37                                         ;
 ; Total pins                         ; 46                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -197,61 +196,50 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 46               ;
-; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; reg:REG_RDM|q[1] ;
-; Maximum fan-out          ; 18               ;
-; Total fan-out            ; 373              ;
-; Average fan-out          ; 2.01             ;
-+--------------------------+------------------+
++------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary    ;
++--------------------------+---------------------+
+; Resource                 ; Usage               ;
++--------------------------+---------------------+
+; I/O pins                 ; 46                  ;
+; DSP block 9-bit elements ; 0                   ;
+; Maximum fan-out node     ; count3a:TIMER|qs[1] ;
+; Maximum fan-out          ; 18                  ;
+; Total fan-out            ; 404                 ;
+; Average fan-out          ; 2.10                ;
++--------------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                            ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |neander_top                   ; 59 (1)            ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                           ; work         ;
-;    |PC:REG_PC|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|PC:REG_PC                 ; work         ;
-;    |control_unit:CU|           ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|control_unit:CU           ; work         ;
-;    |count3a:TIMER|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|count3a:TIMER             ; work         ;
-;    |decoder3to8:TIMER_DECODER| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder3to8:TIMER_DECODER ; work         ;
-;    |mux2g:MULTIPLEX|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|mux2g:MULTIPLEX           ; work         ;
-;    |neander_rom:MEM|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|neander_rom:MEM           ; work         ;
-;    |reg:REG_AC|                ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_AC                ; work         ;
-;    |reg:REG_RDM|               ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RDM               ; work         ;
-;    |reg:REG_REM|               ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_REM               ; work         ;
-;    |reg:REG_RI|                ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RI                ; work         ;
-;    |ula8bit:ULA|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|ula8bit:ULA               ; work         ;
-+--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                              ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                     ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
+; |neander_top                    ; 63 (0)            ; 37 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                            ; work         ;
+;    |PC:REG_PC|                  ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|PC:REG_PC                  ; work         ;
+;    |control_unit:CU|            ; 23 (23)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|control_unit:CU            ; work         ;
+;    |count3a:TIMER|              ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|count3a:TIMER              ; work         ;
+;    |decoder3to8:TIMER_DECODER|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder3to8:TIMER_DECODER  ; work         ;
+;    |decoder4to16:INSTR_DECODER| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder4to16:INSTR_DECODER ; work         ;
+;    |mux2g:MULTIPLEX|            ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|mux2g:MULTIPLEX            ; work         ;
+;    |neander_rom:MEM|            ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|neander_rom:MEM            ; work         ;
+;    |reg:REG_AC|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_AC                 ; work         ;
+;    |reg:REG_RDM|                ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RDM                ; work         ;
+;    |reg:REG_REM|                ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_REM                ; work         ;
+;    |reg:REG_RI|                 ; 0 (0)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RI                 ; work         ;
+;    |ula8bit:ULA|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|ula8bit:ULA                ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; reg:REG_RDM|q[7]                      ; Stuck at GND due to stuck port data_in ;
-; reg:REG_RI|q[7]                       ; Stuck at GND due to stuck port data_in ;
-; reg:REG_RDM|q[2,3]                    ; Merged with reg:REG_RDM|q[1]           ;
-; Total Number of Removed Registers = 4 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                           ;
-+------------------+---------------------------+----------------------------------------+
-; Register name    ; Reason for Removal        ; Registers Removed due to This Register ;
-+------------------+---------------------------+----------------------------------------+
-; reg:REG_RDM|q[7] ; Stuck at GND              ; reg:REG_RI|q[7]                        ;
-;                  ; due to stuck port data_in ;                                        ;
-+------------------+---------------------------+----------------------------------------+
++----------------------------------------------------------------------+
+; Registers Removed During Synthesis                                   ;
++---------------------------------------+------------------------------+
+; Register name                         ; Reason for Removal           ;
++---------------------------------------+------------------------------+
+; reg:REG_RDM|q[2,3]                    ; Merged with reg:REG_RDM|q[1] ;
+; Total Number of Removed Registers = 2 ;                              ;
++---------------------------------------+------------------------------+
 
 
 +------------------------------------------------------+
@@ -259,7 +247,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 35    ;
+; Total registers                              ; 37    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 3     ;
@@ -274,7 +262,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |neander_top|reg:REG_AC|q[5] ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |neander_top|reg:REG_AC|q[6] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -392,7 +380,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -402,7 +390,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Oct 14 10:56:11 2023
+    Info: Processing started: Sat Oct 14 11:50:59 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off neander_top -c neander_top
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula8bit.vhd
@@ -475,6 +463,7 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux13
     Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux12
     Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux10
+    Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux7
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux0
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux5
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux3
@@ -484,24 +473,23 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux7
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer control_unit:CU|inc_PC~0
+    Warning (19017): Found clock multiplexer control_unit:CU|carga_PC~0
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "REM_out[4]" is stuck at GND
     Warning (13410): Pin "REM_out[5]" is stuck at GND
     Warning (13410): Pin "REM_out[6]" is stuck at GND
     Warning (13410): Pin "REM_out[7]" is stuck at GND
-    Warning (13410): Pin "RDM_out[7]" is stuck at GND
-    Warning (13410): Pin "RI_out[7]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 117 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 66 logic cells
+    Info (21061): Implemented 71 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
-    Info: Peak virtual memory: 4756 megabytes
-    Info: Processing ended: Sat Oct 14 10:56:17 2023
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Sat Oct 14 11:51:01 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

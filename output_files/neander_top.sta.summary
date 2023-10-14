@@ -3,28 +3,28 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'count3a:TIMER|qs[0]'
-Slack : -3.081
-TNS   : -56.799
+Slack : -2.720
+TNS   : -61.226
 
 Type  : Slow 1200mV 85C Model Setup 'mclk'
-Slack : -0.513
-TNS   : -0.751
+Slack : -0.359
+TNS   : -0.602
 
 Type  : Slow 1200mV 85C Model Hold 'count3a:TIMER|qs[0]'
-Slack : -2.438
-TNS   : -25.053
+Slack : -1.992
+TNS   : -27.188
 
 Type  : Slow 1200mV 85C Model Hold 'mclk'
-Slack : -0.458
-TNS   : -1.217
+Slack : -0.367
+TNS   : -0.707
 
 Type  : Slow 1200mV 85C Model Recovery 'mclk'
-Slack : -1.224
-TNS   : -3.666
+Slack : -0.936
+TNS   : -2.801
 
 Type  : Slow 1200mV 85C Model Removal 'mclk'
-Slack : -0.446
-TNS   : -1.338
+Slack : -1.284
+TNS   : -3.852
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mclk'
 Slack : -3.000
@@ -32,31 +32,31 @@ TNS   : -6.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
 Slack : -1.000
-TNS   : -45.000
+TNS   : -56.000
 
 Type  : Slow 1200mV 0C Model Setup 'count3a:TIMER|qs[0]'
-Slack : -2.723
-TNS   : -48.759
+Slack : -2.392
+TNS   : -53.384
 
 Type  : Slow 1200mV 0C Model Setup 'mclk'
-Slack : -0.352
-TNS   : -0.461
+Slack : -0.216
+TNS   : -0.328
 
 Type  : Slow 1200mV 0C Model Hold 'count3a:TIMER|qs[0]'
-Slack : -2.187
-TNS   : -22.189
+Slack : -1.789
+TNS   : -24.629
 
 Type  : Slow 1200mV 0C Model Hold 'mclk'
-Slack : -0.400
-TNS   : -1.089
+Slack : -0.329
+TNS   : -0.656
 
 Type  : Slow 1200mV 0C Model Recovery 'mclk'
-Slack : -0.986
-TNS   : -2.950
+Slack : -0.728
+TNS   : -2.178
 
 Type  : Slow 1200mV 0C Model Removal 'mclk'
-Slack : -0.402
-TNS   : -1.206
+Slack : -1.195
+TNS   : -3.585
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mclk'
 Slack : -3.000
@@ -64,31 +64,31 @@ TNS   : -6.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
 Slack : -1.000
-TNS   : -45.000
+TNS   : -56.000
 
 Type  : Fast 1200mV 0C Model Setup 'count3a:TIMER|qs[0]'
-Slack : -1.553
-TNS   : -23.845
+Slack : -1.348
+TNS   : -26.482
 
 Type  : Fast 1200mV 0C Model Setup 'mclk'
-Slack : 0.173
+Slack : 0.265
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'count3a:TIMER|qs[0]'
-Slack : -1.453
-TNS   : -15.738
+Slack : -1.194
+TNS   : -15.974
 
 Type  : Fast 1200mV 0C Model Hold 'mclk'
-Slack : -0.405
-TNS   : -1.065
+Slack : -0.363
+TNS   : -0.808
 
 Type  : Fast 1200mV 0C Model Recovery 'mclk'
-Slack : -0.250
-TNS   : -0.746
+Slack : -0.136
+TNS   : -0.408
 
 Type  : Fast 1200mV 0C Model Removal 'mclk'
-Slack : -0.384
-TNS   : -1.152
+Slack : -0.863
+TNS   : -2.589
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mclk'
 Slack : -3.000
@@ -96,6 +96,6 @@ TNS   : -6.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'count3a:TIMER|qs[0]'
 Slack : -1.000
-TNS   : -45.000
+TNS   : -56.000
 
 ------------------------------------------------------------

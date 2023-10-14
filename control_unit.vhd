@@ -28,8 +28,7 @@ ARCHITECTURE control_unit OF control_unit IS
     CONSTANT iAND : INTEGER := 5; -- Adicionada a instrução AND
     CONSTANT iNOT : INTEGER := 6;
     CONSTANT iJMP : INTEGER := 7;
-    CONSTANT iJN : INTEGER := 8;
-    CONSTANT iJZ : INTEGER := 9;
+    CONSTANT iJN : INTEGER := 8; -- Adicionada a instrução JN
     CONSTANT iHLT : INTEGER := 15; -- Adicionada a instrução END (HLT)
 
 BEGIN
@@ -42,7 +41,7 @@ BEGIN
         (t(4) AND instr(iJMP));
 
     inc_PC <= t(1) OR t(2) OR
-        ((t(6) OR t(7)) AND (instr(iLDA) OR instr(iADD) OR instr(iAND) OR instr(iHLT)));
+        ((t(6) OR t(7)) AND (instr(iLDA) OR instr(iADD) OR instr(iAND) OR instr(iHLT) OR instr(iJN)));
 
     carga_RI <= t(2);
 
@@ -54,7 +53,7 @@ BEGIN
     carga_NZ <= (t(7) AND (instr(iLDA) OR instr(iADD) OR instr(iAND))) OR
         (t(4) AND instr(iAND));
 
-    carga_PC <= t(2) OR (t(7) AND (instr(iLDA) OR instr(iADD) OR instr(iAND))) OR
+    carga_PC <= t(2) OR (t(7) AND (instr(iLDA) OR instr(iADD) OR instr(iAND) OR instr(iJN))) OR
         (t(5) AND instr(iJMP));
 
     goto_t0 <= (instr(iNOP) AND t(3)) OR

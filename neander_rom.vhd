@@ -15,31 +15,27 @@ ARCHITECTURE neander_rom OF neander_rom IS
     CONSTANT iLDA : STD_LOGIC_VECTOR (7 DOWNTO 0) := "00100000";
     CONSTANT iADD : STD_LOGIC_VECTOR (7 DOWNTO 0) := "00110000";
     CONSTANT iOR : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01000000";
-    CONSTANT iAND : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01010000"; -- Adicionada a instrução AND
+    CONSTANT iAND : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01010000";
     CONSTANT iNOT : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01100000";
     CONSTANT iJMP : STD_LOGIC_VECTOR (7 DOWNTO 0) := "01110000";
     CONSTANT iJN : STD_LOGIC_VECTOR (7 DOWNTO 0) := "10000000";
-    CONSTANT iJZ : STD_LOGIC_VECTOR (7 DOWNTO 0) := "10010000";
     CONSTANT iHLT : STD_LOGIC_VECTOR (7 DOWNTO 0) := "11110000";
 
     TYPE rom_array IS ARRAY (NATURAL RANGE <>) OF STD_LOGIC_VECTOR (7 DOWNTO 0);
 
     CONSTANT rom : rom_array := (
-    iLDA, X"0E",
-    iADD, X"0F",
-    iAND, X"10", -- Instrução AND
-    iNOP, X"00",
-    iSTA, X"10",
-    iNOP,
-    iNOP,
-    iNOP,
-    iNOP,
-    iNOP,
-    iNOP,
-    X"03",
-    X"02"
-);
-
+        iLDA, X"0E",
+        iADD, X"0F",
+        iAND, X"10",
+        iNOP, X"00",
+        iSTA, X"10",
+        iHLT, X"1F",
+        iNOP, X"00", -- Adicionada instrução JN
+        iNOP, X"00",
+        iNOP, X"00",
+        iNOP, X"00",
+        X"03", X"02"
+    );
 
 BEGIN
     PROCESS (addr)
