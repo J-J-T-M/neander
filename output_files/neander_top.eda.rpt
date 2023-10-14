@@ -1,5 +1,5 @@
 EDA Netlist Writer report for neander_top
-Fri Oct 13 18:09:34 2023
+Fri Oct 13 19:33:00 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Oct 13 18:09:34 2023 ;
+; EDA Netlist Writer Status ; Successful - Fri Oct 13 19:33:00 2023 ;
 ; Revision Name             ; neander_top                           ;
 ; Top-level Entity Name     ; neander_top                           ;
 ; Family                    ; Cyclone IV GX                         ;
@@ -101,7 +101,7 @@ Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: programming logic devices manufactured by Altera and sold by 
     Info: Altera or its authorized distributors.  Please refer to the 
     Info: applicable agreement for further details.
-    Info: Processing started: Fri Oct 13 18:09:33 2023
+    Info: Processing started: Fri Oct 13 19:32:59 2023
 Info: Command: quartus_eda --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory=C:/Users/jonat/Downloads/neander/neander/simulation/qsim/ neander_top -c neander_top
 Info (204019): Generated file neander_top_6_1200mv_85c_slow.vo in folder "C:/Users/jonat/Downloads/neander/neander/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file neander_top_6_1200mv_0c_slow.vo in folder "C:/Users/jonat/Downloads/neander/neander/simulation/qsim//" for EDA simulation tool
@@ -112,8 +112,8 @@ Info (204019): Generated file neander_top_6_1200mv_0c_v_slow.sdo in folder "C:/U
 Info (204019): Generated file neander_top_min_1200mv_0c_v_fast.sdo in folder "C:/Users/jonat/Downloads/neander/neander/simulation/qsim//" for EDA simulation tool
 Info (204019): Generated file neander_top_v.sdo in folder "C:/Users/jonat/Downloads/neander/neander/simulation/qsim//" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4632 megabytes
-    Info: Processing ended: Fri Oct 13 18:09:34 2023
+    Info: Peak virtual memory: 4628 megabytes
+    Info: Processing ended: Fri Oct 13 19:33:00 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

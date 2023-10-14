@@ -24,22 +24,23 @@ ARCHITECTURE neander_rom OF neander_rom IS
 
 	TYPE rom_array IS ARRAY (NATURAL RANGE <>) OF STD_LOGIC_VECTOR (7 DOWNTO 0);
 
-	CONSTANT rom : rom_array := (
-		iLDA, X"0E",
-		iADD, X"0F",
-		iNOT,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		iNOP,
-		X"03",
-		X"02"
-	);
+CONSTANT rom : rom_array := (
+    iLDA, X"0E",
+    iADD, X"0F",
+    iOR, X"10", 
+    iNOT,
+    iNOP,
+    iNOP,
+    iNOP,
+    iNOP,
+    iNOP,
+    iNOP,
+    iNOP,
+    iNOP,
+    X"03",
+    X"02"
+);
+
 
 BEGIN
 	PROCESS (addr)
