@@ -1,5 +1,5 @@
 Analysis & Synthesis report for neander_top
-Sat Oct 14 10:11:38 2023
+Sat Oct 14 10:56:16 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -55,15 +55,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 14 10:11:38 2023      ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 14 10:56:16 2023      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; neander_top                                ;
 ; Top-level Entity Name              ; neander_top                                ;
 ; Family                             ; Cyclone IV GX                              ;
-; Total logic elements               ; 69                                         ;
-;     Total combinational functions  ; 62                                         ;
-;     Dedicated logic registers      ; 36                                         ;
-; Total registers                    ; 36                                         ;
+; Total logic elements               ; 66                                         ;
+;     Total combinational functions  ; 59                                         ;
+;     Dedicated logic registers      ; 35                                         ;
+; Total registers                    ; 35                                         ;
 ; Total pins                         ; 46                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -197,18 +197,18 @@ applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+-----------------------------------------------------------+---------+
 
 
-+------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary    ;
-+--------------------------+---------------------+
-; Resource                 ; Usage               ;
-+--------------------------+---------------------+
-; I/O pins                 ; 46                  ;
-; DSP block 9-bit elements ; 0                   ;
-; Maximum fan-out node     ; count3a:TIMER|qs[1] ;
-; Maximum fan-out          ; 16                  ;
-; Total fan-out            ; 382                 ;
-; Average fan-out          ; 2.01                ;
-+--------------------------+---------------------+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 46               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; reg:REG_RDM|q[1] ;
+; Maximum fan-out          ; 18               ;
+; Total fan-out            ; 373              ;
+; Average fan-out          ; 2.01             ;
++--------------------------+------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -216,15 +216,15 @@ applicable agreement for further details.
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node     ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Library Name ;
 +--------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+----------------------------------------+--------------+
-; |neander_top                   ; 62 (1)            ; 36 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                           ; work         ;
+; |neander_top                   ; 59 (1)            ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 46   ; 0            ; |neander_top                           ; work         ;
 ;    |PC:REG_PC|                 ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|PC:REG_PC                 ; work         ;
-;    |control_unit:CU|           ; 22 (22)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|control_unit:CU           ; work         ;
+;    |control_unit:CU|           ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|control_unit:CU           ; work         ;
 ;    |count3a:TIMER|             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|count3a:TIMER             ; work         ;
-;    |decoder3to8:TIMER_DECODER| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder3to8:TIMER_DECODER ; work         ;
+;    |decoder3to8:TIMER_DECODER| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|decoder3to8:TIMER_DECODER ; work         ;
 ;    |mux2g:MULTIPLEX|           ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|mux2g:MULTIPLEX           ; work         ;
-;    |neander_rom:MEM|           ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|neander_rom:MEM           ; work         ;
+;    |neander_rom:MEM|           ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|neander_rom:MEM           ; work         ;
 ;    |reg:REG_AC|                ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_AC                ; work         ;
-;    |reg:REG_RDM|               ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RDM               ; work         ;
+;    |reg:REG_RDM|               ; 0 (0)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RDM               ; work         ;
 ;    |reg:REG_REM|               ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_REM               ; work         ;
 ;    |reg:REG_RI|                ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|reg:REG_RI                ; work         ;
 ;    |ula8bit:ULA|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |neander_top|ula8bit:ULA               ; work         ;
@@ -239,8 +239,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+----------------------------------------+
 ; reg:REG_RDM|q[7]                      ; Stuck at GND due to stuck port data_in ;
 ; reg:REG_RI|q[7]                       ; Stuck at GND due to stuck port data_in ;
-; reg:REG_RDM|q[3]                      ; Merged with reg:REG_RDM|q[2]           ;
-; Total Number of Removed Registers = 3 ;                                        ;
+; reg:REG_RDM|q[2,3]                    ; Merged with reg:REG_RDM|q[1]           ;
+; Total Number of Removed Registers = 4 ;                                        ;
 +---------------------------------------+----------------------------------------+
 
 
@@ -259,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
+; Total registers                              ; 35    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 3     ;
@@ -274,7 +274,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |neander_top|reg:REG_AC|q[6] ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |neander_top|reg:REG_AC|q[5] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
 
 
@@ -392,7 +392,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -402,7 +402,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Oct 14 10:11:35 2023
+    Info: Processing started: Sat Oct 14 10:56:11 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off neander_top -c neander_top
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ula8bit.vhd
@@ -474,17 +474,16 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux2
     Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux13
     Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux12
+    Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux10
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux0
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux5
-    Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux11
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux3
-    Warning (19017): Found clock multiplexer decoder4to16:INSTR_DECODER|Mux14
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux1
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux6
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux4
     Warning (19017): Found clock multiplexer decoder3to8:TIMER_DECODER|Mux7
 Warning (19016): Clock multiplexers are found and protected
-    Warning (19017): Found clock multiplexer control_unit:CU|carga_AC~0
+    Warning (19017): Found clock multiplexer control_unit:CU|inc_PC~0
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "REM_out[4]" is stuck at GND
     Warning (13410): Pin "REM_out[5]" is stuck at GND
@@ -495,14 +494,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 115 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 45 output pins
-    Info (21061): Implemented 69 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4759 megabytes
-    Info: Processing ended: Sat Oct 14 10:11:38 2023
-    Info: Elapsed time: 00:00:03
+    Info (21061): Implemented 66 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4756 megabytes
+    Info: Processing ended: Sat Oct 14 10:56:17 2023
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:02
 
 

@@ -1,5 +1,5 @@
 Assembler report for neander_top
-Sat Oct 14 10:12:01 2023
+Sat Oct 14 10:56:36 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 14 10:12:01 2023 ;
+; Assembler Status      ; Successful - Sat Oct 14 10:56:36 2023 ;
 ; Revision Name         ; neander_top                           ;
 ; Top-level Entity Name ; neander_top                           ;
 ; Family                ; Cyclone IV GX                         ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                        ;
 +----------------+--------------------------------------------------------------------------------+
 ; Device         ; EP4CGX22CF19C6                                                                 ;
-; JTAG usercode  ; 0x0017C580                                                                     ;
-; Checksum       ; 0x0017C580                                                                     ;
+; JTAG usercode  ; 0x0017BECA                                                                     ;
+; Checksum       ; 0x0017BECA                                                                     ;
 +----------------+--------------------------------------------------------------------------------+
 
 
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sat Oct 14 10:11:59 2023
+    Info: Processing started: Sat Oct 14 10:56:35 2023
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off neander_top -c neander_top
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4666 megabytes
-    Info: Processing ended: Sat Oct 14 10:12:01 2023
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4662 megabytes
+    Info: Processing ended: Sat Oct 14 10:56:36 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
